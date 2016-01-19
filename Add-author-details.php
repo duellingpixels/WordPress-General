@@ -1,5 +1,6 @@
-<?php
 
+<?php
+	
 /** Replace the standard loop with our custom loop */
 remove_action( 'genesis_loop', 'genesis_do_loop' );
 add_action( 'genesis_loop',  'sgr_author_info', 20);
@@ -31,18 +32,18 @@ add_action( 'genesis_loop',  'sgr_author_info', 20);
        
 	echo apply_filters('the_content', get_post_meta($author_id->ID, $bio, true));
     
-	echo '<div class="entry">';
+	echo '<div class="introduction">';
 			//$author_link  = get_author_posts_url( get_the_author_meta( 'ID' ) );
-			printf( '<div class="author-avatar">%s</div>', $entry_author );
-			echo '<p>About ' . $name . ' ' . $bio . '</p>';
+			printf( '<div class="one-third first">%s</div>', $entry_author );
+	echo '<div class="two-thirds ">';
+			echo '<h1  class=" page-title">' . $curauth->display_name .'</h1>';
+			echo '<p>' . $bio . '</p><br>';
 			echo '<p>Website: <a href="' . $website . '">' . $website . '</p>';
-	echo '</div>';
-	
+	echo '</div></div></div>';
 			
 	echo '<h4 class="entry-title" style="text-align: center"> All posts by ' . $name . '</h4> ';
 			
 	genesis_standard_loop();
 }
-
 
 genesis();
