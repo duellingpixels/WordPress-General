@@ -3,7 +3,7 @@
 	
 /** Replace the standard loop with our custom loop */
 remove_action( 'genesis_loop', 'genesis_do_loop' );
-add_action( 'genesis_loop',  'sgr_author_info', 20);
+add_action( 'genesis_loop',  'dp_author_info', 20);
 /**
  * Function to display author details on the author archive page
  *
@@ -15,7 +15,7 @@ add_action( 'genesis_loop',  'sgr_author_info', 20);
  *
  * @return echo out the author's details
  */
- function sgr_author_info() {
+ function dp_author_info() {
 	
     
     if( !is_author() ) return;
