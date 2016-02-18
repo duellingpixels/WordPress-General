@@ -1,7 +1,7 @@
 
 <?php
 	
-/** Replace the standard loop with our custom loop */
+/** Replace the standard loop with our author loop */
 remove_action( 'genesis_loop', 'genesis_do_loop' );
 add_action( 'genesis_loop',  'dp_author_info', 20);
 /**
