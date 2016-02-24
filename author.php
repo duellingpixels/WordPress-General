@@ -1,6 +1,8 @@
 
 <?php
-	
+//* Remove the post navigation (requires HTML5 theme support)
+remove_action( 'genesis_after_endwhile', 'genesis_posts_nav' );
+
 /** Replace the standard loop with our author loop */
 remove_action( 'genesis_loop', 'genesis_do_loop' );
 add_action( 'genesis_loop',  'dp_author_info', 20);
