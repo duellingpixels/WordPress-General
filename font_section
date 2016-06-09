@@ -4,7 +4,7 @@ function mytheme_kirki_sections( $wp_customize ) {
      */
 
      $wp_customize->add_section( 'typography', array(
-        'title'       => __( 'Fonts', 'atmosphere' ),
+        'title'       => __( 'Fonts', 'genesis-sample' ),
         'priority'    => 20,
     ) );
     
