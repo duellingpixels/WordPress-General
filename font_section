@@ -1,0 +1,13 @@
+function mytheme_kirki_sections( $wp_customize ) {
+     /**
+     * Add sections
+     */
+
+     $wp_customize->add_section( 'typography', array(
+        'title'       => __( 'Fonts', 'atmosphere' ),
+        'priority'    => 20,
+    ) );
+    
+
+}
+add_action( 'customize_register', 'mytheme_kirki_sections' );
